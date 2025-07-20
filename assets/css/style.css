@@ -1,10 +1,243 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --font-heading: "Sen", sans-serif;
+  --yl: #ffb900;
+}
 html {
   font-size: 62.5%;
 }
 /* khoi phuc co chu mac dinh theo rem */
 body {
   font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =============common============= */
+a {
+  text-decoration: none;
+}
+.btn {
+  min-width: 118px;
+  display: inline-block;
+  padding: 0 16px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 999px;
+  background: #171100;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* =============header================ */
+.header {
+  background-color: #fffcf4;
+}
+.header.fixed {
+  z-index: 1;
+  position: sticky;
+  top: -28px;
+}
+.nav {
+  margin-left: auto;
+}
+header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+.nav ul {
+  display: flex;
+}
+.nav a {
+  color: #5f5b53;
+  font-size: 1.6rem;
+  line-height: 28px; /*175% */
+  padding: 8px 21px;
+  position: relative;
+  /* background-color: aqua; */
+}
+.nav li.active a,
+.nav a:hover {
+  color: #171100;
+  /* font-weight: 600; */
+  text-shadow: 1px 0 0 currentColor;
+}
+.nav li.active a::after {
+  position: absolute;
+  bottom: 6px;
+  left: 21px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #171100;
+}
+
+.header .btn-su {
+  min-width: 144px;
+}
+
+.header .action {
+  margin-left: 49px;
+}
+/* =============hero================ */
+.hero {
+  padding: 56px 0 65px;
+  background-color: #fffcf4;
+}
+.hero .body {
+  display: flex;
+}
+/* ============== hero - left ============*/
+.hero .media-block {
+  width: 48%;
+  position: relative;
+}
+
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.hero .hero-summary {
+  padding: 24px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+  width: 270px;
+}
+.hero .hero-summary .item {
+  display: flex;
+  align-items: center;
+}
+.hero .hero-summary .item .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero-summary .item + .item {
+  margin-top: 22px;
+}
+/* .hero .hero-summary .item:first-of-type .icon {
+  background-color: #fff9e8;
+}
+.hero .hero-summary .item:nth-child(2) .icon {
+  background-color: #fcefff;
+}
+.hero .hero-summary .item:last-of-type .icon {
+  background-color: #ebeaff;
+} */
+.hero .hero-summary .icon1 {
+  background-color: #fff9e8;
+}
+.hero .hero-summary .icon2 {
+  background-color: #fcefff;
+}
+.hero .hero-summary .icon3 {
+  background-color: #ebeaff;
+}
+.hero .hero-summary .info {
+  margin-left: 16px;
+}
+.hero .hero-summary .info .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 186%; /* 185.174%*/
+}
+.hero .hero-summary .info .tittle {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 167%;
+}
+
+/* ======= hero -right========= */
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
+}
+
+.hero .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 117%;
+  letter-spacing: -1.16px;
+}
+.hero .desc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 167%;
+}
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+}
+.hero-cta {
+  min-width: 180px;
+  background-color: var(--yl);
+  line-height: 64px;
+}
+.hero .watch-video {
+  margin-left: 28px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.hero .watch-video .icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+}
+.hero .watch-video span {
+  margin-left: 14px;
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 167%;
+}
+.hero .desc-recent {
+  margin-top: 48px;
+}
+.hero .stats strong {
+  color: #171100;
+  font-size: 4.4rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 123%;
+  margin-right: 15px;
+}
+.hero .stats strong:nth-child(2) {
+  margin-left: 28px;
+}
+.hero .stats {
+  margin-top: 8px;
 }
