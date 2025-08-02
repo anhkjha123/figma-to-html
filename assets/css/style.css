@@ -364,5 +364,62 @@ header .body {
   border: none;
 }
 .popular .course_list .course_item .foot .btn-book:hover {
-  background: #ffb900;
+  background: var(--yl);
+}
+
+/* ===================feedback============== */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0 96px;
+  background: #2e2100;
+}
+.feedback .feedback-item {
+  display: flex;
+}
+.feedback .feedback-item .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+.feedback .feedback-item .info .member-name {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 142%;
+}
+.feedback .feedback-item .info .desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 186%;
+}
+.feedback .feedback-item .info .dots {
+  gap: 6px;
+  margin-top: 28px;
+  display: flex;
+}
+.feedback .feedback-item .info .dots .dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: #634700;
+  cursor: pointer;
+}
+.feedback .feedback-item .info .dots .dot.active {
+  background: var(--yl);
+  cursor: default;
+}
+
+.feedback .feedback-item .content {
+  width: 66%;
+  margin-left: auto;
+}
+.feedback .feedback-item .content blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 154%;
 }
