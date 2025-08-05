@@ -370,10 +370,16 @@ header .body {
 /* ===================feedback============== */
 .feedback {
   margin-top: 135px;
-  padding: 96px 0 96px;
+  padding: 96px 0;
   background: #2e2100;
 }
-.feedback .feedback-item {
+.feedback .feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+.feedback-item {
+  width: 100%;
+  flex-shrink: 0;
   display: flex;
 }
 .feedback .feedback-item .avatar {
@@ -398,8 +404,8 @@ header .body {
 }
 .feedback .feedback-item .info .dots {
   gap: 6px;
-  margin-top: 28px;
   display: flex;
+  margin-top: 28px;
 }
 .feedback .feedback-item .info .dots .dot {
   height: 6px;
@@ -416,8 +422,9 @@ header .body {
 .feedback .feedback-item .content {
   width: 66%;
   margin-left: auto;
+  min-width: 0;
 }
-.feedback .feedback-item .content blockquote {
+.feedback .feedback-item blockquote {
   color: #fff;
   font-size: 2.6rem;
   font-style: italic;
